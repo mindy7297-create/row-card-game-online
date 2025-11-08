@@ -1,0 +1,12 @@
+{
+  "name": "electron",
+  "version": "1.0.0",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "electron": "^31.0.2"
+  }
+}

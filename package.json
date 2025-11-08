@@ -1,0 +1,16 @@
+{
+  "name": "row-card-game",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "client",
+    "server",
+    "electron",
+    "shared"
+  ],
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "build": "pnpm -r build",
+    "dev": "echo \"Run server and client separately: pnpm --filter server dev & pnpm --filter client dev\""
+  }
+}
