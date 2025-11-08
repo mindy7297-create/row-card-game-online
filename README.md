@@ -1,40 +1,37 @@
-# row-card-game
+# RowCard – Multiplayer Card Game (Web)
 
-A 4-player betting strategy card game with hidden and revealed cards, **online multiplayer (Socket.IO)**, **single betting round**, **side pots**, **AI bot**, and stubs for **desktop (Electron)** and **mobile (Capacitor)**. Licensed under **MIT**.
+A 4-player online card game where each player selects hidden & revealed cards and bets chips.  
+Built with Node.js, Socket.IO and React (Vite). Fully real-time and works in browser without install.
 
-## Tech
-- Client: Vite + React + TypeScript + Tailwind
-- Server: Node + Express + Socket.IO (TypeScript)
-- Shared: common types and pure logic
-- Electron wrapper, Capacitor stub
+---
 
-## Quick Start
+## 🎮 Live Game
 
-```bash
-# 1) Install deps (use PNPM recommended)
-pnpm i
-# or: npm i --workspaces
+Play here:  
+https://row-card-game-online-client.vercel.app/
 
-# 2) Run server (terminal A)
-pnpm --filter server dev
+Backend API / WebSocket server:  
+https://row-card-game-online-server.onrender.com/
 
-# 3) Run client (terminal B)
-pnpm --filter client dev
-# open http://localhost:5173
-```
+---
 
-## Gameplay (short)
-- 5 rounds. Everyone antes each round.
-- Each player picks 3 cards per round:
-  - Row 1: chosen, visible to others (blind to self).
-  - Row 2 + Row 3: choose one from each; reveal one, keep the other hidden.
-- Single betting round: check/bet/call/raise/fold/all-in (with side pots).
-- Showdown: sum(Row1 + revealed + hidden); highest wins pot.
-- Used cards are discarded.
+## 🧠 How the Game Works (Quick Rules)
 
-## Deploy
-- Client: Vercel/Netlify
-- Server: Render/Fly/railway
+- 4 players, each starts with the same number of chips
+- Each player has 3 rows of cards (1–10)
+- **Row 1:** choose 1 card → face down (only others can see it)
+- **Row 2 & 3:** choose 2 cards each → reveal 1, keep 1 hidden
+- After all cards are placed → betting round (bet / call / raise / fold)
+- Showdown: highest total of 3 cards wins the pot
+- Game repeats for 5 rounds (or until players are out of chips)
 
-## License
-MIT
+---
+
+## 🛠️ Tech Stack
+
+| Part | Tech |
+|-------|------|
+| Frontend | React + Vite + TypeScript |
+| Backend | Node.js + Express + Socket.IO |
+| Realtime | WebSockets |
+| Hosting | Vercel
