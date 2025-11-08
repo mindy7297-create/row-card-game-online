@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": ".",
     "module": "commonjs",
     "target": "es2020",
     "esModuleInterop": true,
     "strict": false,
     "skipLibCheck": true
   },
-  "include": ["src", "../shared"]
+  "include": ["server/src", "shared"]
 }
